@@ -1,0 +1,28 @@
+# Planned URL; publishing this site is a separate, explicit action.
+url: https://henry-osorto.github.io/bchR/
+template:
+  bootstrap: 5
+  bootswatch: flatly
+home:
+  title: bchR - Estadísticas del BCH desde R
+  description: Cliente independiente en desarrollo para la Web API del BCH.
+reference:
+  - title: Catálogo y descarga
+    contents:
+      - bch_indicators
+      - bch_search_indicators
+      - bch_get_data
+  - title: Datos y procedencia
+    contents:
+      - bch_result_accessors
+      - is_bch_result
+      - validate_bch_result
+      - as_tibble.bch_result
+  - title: Exploración visual
+    contents:
+      - bch_view_indicators
+      - bch_plot_series
+  - title: Caché local
+    contents:
+      - bch_cache_info
+      - bch_clear_cache

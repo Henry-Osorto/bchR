@@ -1,0 +1,21 @@
+name: Propuesta de mejora
+description: Proponer una función o mejora con su justificación.
+title: "[Propuesta] "
+body:
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Problema o caso de uso
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Comportamiento propuesto y alternativas
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia y restricciones
+      description: Para cambios estadísticos, indica fuentes, unidades y frecuencia. No envíes claves.

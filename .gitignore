@@ -1,0 +1,30 @@
+# R/RStudio session state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+# Credentials, including accidental backup copies (never commit these)
+.Renviron*
+.env
+.env.*
+.Rprofile
+*.pem
+*.key
+# Local build output and data; no broad *.rds rule hiding curated fixtures
+*.Rcheck/
+*.tar.gz
+*.zip
+*.Rout
+*.Rout.fail
+docs/
+dev/artifacts/
+cache/
+bch-cache-*.json
+work/
+project-docs/
+research-artifacts/
+# OS/editor state
+.DS_Store
+Thumbs.db
+*~
+*.swp
