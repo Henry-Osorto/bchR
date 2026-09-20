@@ -1,7 +1,0 @@
-bibentry(
-  bibtype = "Manual",
-  title = "bchR: Access to the Central Bank of Honduras Statistical API",
-  author = person("Henry", "Osorto"),
-  year = "2026",
-  note = paste("R package version", meta$Version, "(development version)")
-)
