@@ -71,9 +71,11 @@ testthat::test_that("viewer data require the six standard catalogue columns", {
 testthat::test_that("viewer uses bch_get_indicators as its backend and returns HTML", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response_json(
-        status_code = 200L,
-        body = .bchr_viewer_records(6L)
+      list(
+        httr2::response_json(
+          status_code = 200L,
+          body = .bchr_viewer_records(6L)
+        )
       )
     )
 
@@ -161,9 +163,11 @@ testthat::test_that("description cells are configured for wrapping", {
 testthat::test_that("open_browser saves HTML without launching a real browser in tests", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response_json(
-        status_code = 200L,
-        body = .bchr_viewer_records(4L)
+      list(
+        httr2::response_json(
+          status_code = 200L,
+          body = .bchr_viewer_records(4L)
+        )
       )
     )
 

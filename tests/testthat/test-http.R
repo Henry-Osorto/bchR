@@ -80,12 +80,13 @@ testthat::test_that("authenticated request is GET and built with httr2", {
     testthat::expect_match(url, "clave=", fixed = TRUE)
     testthat::expect_true(grepl(secret, url, fixed = TRUE))
 
-    headers <- httr2::req_get_headers(request, redacted = "redact")
-    header_names <- tolower(names(headers))
-    ua_index <- which(header_names == "user-agent")
-
-    testthat::expect_length(ua_index, 1L)
-    testthat::expect_match(headers[[ua_index]], "^bchR/")
+    # req_user_agent() is stored as the libcurl `useragent` option, not as
+    # a custom header returned by req_get_headers().
+    testthat::expect_identical(
+      request$options$useragent,
+      .bch_user_agent()
+    )
+    testthat::expect_match(request$options$useragent, "^bchR/")
   })
 })
 
@@ -326,7 +327,7 @@ testthat::test_that("bch_get converts a mocked 401 into a safe authentication er
     secret <- Sys.getenv("BCH_API_KEY")
 
     httr2::local_mocked_responses(
-      httr2::response(status_code = 401L)
+      list(httr2::response(status_code = 401L))
     )
 
     condition <- tryCatch(

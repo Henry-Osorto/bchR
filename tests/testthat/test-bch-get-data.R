@@ -201,9 +201,11 @@ testthat::test_that("bch_get_data reports progress without changing row counts",
 testthat::test_that("a valid empty JSON array becomes an empty-data error", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response_json(
-        status_code = 200L,
-        body = list()
+      list(
+        httr2::response_json(
+          status_code = 200L,
+          body = list()
+        )
       )
     )
 
@@ -361,7 +363,8 @@ testthat::test_that("missing required response fields are schema errors", {
     testthat::expect_error(
       bch_get_data(609, progress = FALSE),
       "Missing column(s): Valor",
-      class = "bchR_data_schema_error"
+      class = "bchR_data_schema_error",
+      fixed = TRUE
     )
   })
 })
@@ -401,7 +404,7 @@ testthat::test_that("missing API key is propagated before network access", {
 testthat::test_that("HTTP authentication errors remain distinguishable", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response(status_code = 401L)
+      list(httr2::response(status_code = 401L))
     )
 
     testthat::expect_error(

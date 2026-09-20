@@ -96,7 +96,6 @@
     Id = reactable::colDef(
       name = "ID",
       minWidth = 82,
-      initWidth = 95,
       maxWidth = 135,
       align = "center",
       sticky = "left",
@@ -113,7 +112,6 @@
     Nombre = reactable::colDef(
       name = "Nombre",
       minWidth = 250,
-      initWidth = 330,
       headerStyle = header_style,
       style = list(
         fontSize = "12.5px",
@@ -125,9 +123,8 @@
     ),
 
     Descripcion = reactable::colDef(
-      name = "Descripción",
+      name = "Descripci\u00f3n",
       minWidth = 340,
-      initWidth = 500,
       headerStyle = header_style,
       style = list(
         fontSize = "12.5px",
@@ -141,7 +138,6 @@
     Periodicidad = reactable::colDef(
       name = "Periodicidad",
       minWidth = 120,
-      initWidth = 135,
       align = "center",
       headerStyle = header_style,
       style = list(
@@ -153,7 +149,6 @@
     Grupo = reactable::colDef(
       name = "Grupo",
       minWidth = 220,
-      initWidth = 300,
       headerStyle = header_style,
       style = list(
         fontSize = "12.5px",
@@ -166,7 +161,6 @@
     CorrelativoGrupo = reactable::colDef(
       name = "Correlativo del grupo",
       minWidth = 150,
-      initWidth = 175,
       align = "center",
       headerStyle = header_style,
       style = list(
@@ -290,10 +284,10 @@
       pageNumbers = "{page} de {pages}",
       pageInfo = "{rowStart}\u2013{rowEnd} de {rows} registros",
       pageSizeOptions = "Mostrar {rows}",
-      pageNextLabel = "Página siguiente",
-      pagePreviousLabel = "Página anterior",
-      pageJumpLabel = "Ir a la página",
-      pageSizeOptionsLabel = "Filas por página"
+      pageNextLabel = "P\u00e1gina siguiente",
+      pagePreviousLabel = "P\u00e1gina anterior",
+      pageJumpLabel = "Ir a la p\u00e1gina",
+      pageSizeOptionsLabel = "Filas por p\u00e1gina"
     )
   )
 

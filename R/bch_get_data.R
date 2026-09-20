@@ -201,7 +201,8 @@
       rows <- lapply(
         x,
         function(record) {
-          row <- setNames(vector("list", length(all_names)), all_names)
+          row <- vector("list", length(all_names))
+          names(row) <- all_names
 
           for (nm in all_names) {
             value <- record[[nm]]

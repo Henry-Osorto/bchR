@@ -1,4 +1,6 @@
+options(bchR.prompt_api_key = FALSE)
+
 library(testthat)
-library(bchR)
+suppressPackageStartupMessages(library(bchR))
 
 test_check("bchR")

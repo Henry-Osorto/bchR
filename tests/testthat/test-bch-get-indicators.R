@@ -133,9 +133,11 @@ testthat::test_that("bch_get_indicators reports its progress messages", {
 testthat::test_that("an empty JSON array becomes an empty-catalogue error", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response_json(
-        status_code = 200L,
-        body = list()
+      list(
+        httr2::response_json(
+          status_code = 200L,
+          body = list()
+        )
       )
     )
 
@@ -238,7 +240,7 @@ testthat::test_that("missing API key is propagated before network access", {
 testthat::test_that("HTTP-layer errors retain their dedicated class", {
   .bchr_with_test_key({
     httr2::local_mocked_responses(
-      httr2::response(status_code = 401L)
+      list(httr2::response(status_code = 401L))
     )
 
     testthat::expect_error(

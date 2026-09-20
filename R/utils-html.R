@@ -271,7 +271,7 @@
     htmltools::tags$img(
       src = institutional_logo,
       class = "bchr-logo",
-      alt = "Identidad gráfica del Banco Central de Honduras"
+      alt = "Identidad gr\u00e1fica del Banco Central de Honduras"
     )
   } else {
     NULL
@@ -290,12 +290,12 @@
           class = "bchr-package-name"
         ),
         htmltools::tags$h1(
-          "Catálogo de indicadores del Banco Central de Honduras",
+          "Cat\u00e1logo de indicadores del Banco Central de Honduras",
           class = "bchr-main-title"
         ),
         htmltools::tags$div(
           paste0(
-            "Exploración interactiva del catálogo recuperado mediante la Web API ",
+            "Exploraci\u00f3n interactiva del cat\u00e1logo recuperado mediante la Web API ",
             "del Banco Central de Honduras."
           ),
           class = "bchr-subtitle"
