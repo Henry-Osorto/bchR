@@ -23,6 +23,14 @@ if (requireNamespace("htmltools", quietly = TRUE)) {
   html <- bch_view_indicators(catalog)
 }
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Henry-Osorto/bchR}
+  \item Report bugs at \url{https://github.com/Henry-Osorto/bchR/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Henry Osorto \email{henry.osorto@unah.edu.hn} (\href{https://orcid.org/0000-0002-4334-9179}{ORCID})
 
