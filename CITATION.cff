@@ -1,19 +1,26 @@
 cff-version: 1.2.0
-message: "Please cite this software when using bchR. This is a development version."
+message: "Please cite this software when using bchR."
 type: software
-title: "bchR: Access to the Central Bank of Honduras Statistical API"
-version: 0.0.9001
+title: "bchR: Access to the Banco Central de Honduras Web API"
+version: 0.1.0
 license: MIT
+repository-code: "https://github.com/Henry-Osorto/bchR"
+
 authors:
   - family-names: Osorto
     given-names: Henry
-    orcid: https://orcid.org/0000-0002-4334-9179
+    orcid: "https://orcid.org/0000-0002-4334-9179"
+
 abstract: >-
-  Independent R development client for indicator discovery, retrieval,
-  provenance, offline caching and descriptive visualization of BCH statistics.
+  bchR is an R client for the Web API of the Banco Central de Honduras.
+  It provides API-key configuration, indicator-catalogue retrieval and
+  browsing, individual-series retrieval, schema validation, minimal type
+  conversion, and secret-free provenance metadata.
+
 keywords:
   - R
   - Honduras
   - official statistics
-  - time series
-# Add repository-code, release date and DOI only after verification.
+  - central bank
+  - Web API
+  - reproducibility
