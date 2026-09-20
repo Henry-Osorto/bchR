@@ -8,3 +8,9 @@
 ^\.Renviron\..*$
 ^dev$
 ^\.gitignore$
+^CITATION\.cff$
+^CODE_OF_CONDUCT\.md$
+^CONTRIBUTING\.md$
+^LICENSE\.md$
+^SECURITY\.md$
+^_pkgdown\.yml$
