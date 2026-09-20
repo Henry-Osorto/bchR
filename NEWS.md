@@ -1,15 +1,16 @@
-# bchR 0.0.9001
+# bchR 0.1.0
 
-## Desarrollo
+## Initial functional version
 
-- Adoptado `bchR` como nombre confirmado; conservado el prototipo anterior fuera del repositorio.
-- Catálogo, búsqueda, descarga por ID/grupo, contenedor de procedencia y caché local.
-- Visor HTML con búsqueda por campo, filtros, ordenación, paginación y copia de ID.
-- Render del visor limitado a la página visible; alternativa completa sin JavaScript.
-- Gráfico descriptivo con huecos y paneles por unidad, sin transformaciones implícitas.
-- Proyecto RStudio, documentación, viñeta offline, cita, recursos de contribución y workflows preparados.
-- Licencia MIT adoptada con confirmación expresa del autor el 2026-09-15.
-- Pendientes: validación autenticada y frecuencias no diarias.
-
-No constituye una release pública. La caché predeterminada cambia al directorio de
-usuario de `bchR`; no se mueve ni elimina automáticamente la caché del prototipo.
+- Added secure configuration of `BCH_API_KEY` with `bch_set_api_key()`.
+- Added retrieval and validation of the BCH indicator catalogue with
+  `bch_get_indicators()`.
+- Added an interactive indicator catalogue viewer with
+  `bch_viewer_indicators()`.
+- Added retrieval of individual indicator series with `bch_get_data()`.
+- Added explicit validation of BCH catalogue and series schemas.
+- Added conservative conversion of `Fecha` to `Date` and `Valor` to numeric.
+- Added secret-free provenance attributes to returned data frames.
+- Added HTTP status handling, transient retries, timeout controls and
+  credential redaction.
+- Added automated tests and cross-platform R CMD check workflows.
